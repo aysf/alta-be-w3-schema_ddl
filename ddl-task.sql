@@ -54,9 +54,12 @@ CREATE TABLE detail_transaction (
     qty int NOT NULL,
     PRIMARY KEY (id),
     FOREIGN KEY (transaction_id) REFERENCES transactions(id),
-	FOREIGN KEY (payment_methods) REFERENCES payment_methods(id),
-    FOREIGN KEY(product_id) REFERENCES product(id)
+	FOREIGN KEY (payment_methods) REFERENCES payment_methods(id)
+    -- FOREIGN KEY(product_id) REFERENCES product(id)
 ); -- answer 2.c
+ALTER TABLE detail_transaction ADD CONSTRAINT detail_transaction_fk3
+FOREIGN KEY (product_id) REFERENCES product(id)
+ON DELETE CASCADE;
 CREATE TABLE kurir (
 	id int PRIMARY KEY,
     name varchar(26) NOT NULL,
