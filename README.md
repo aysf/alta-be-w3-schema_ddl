@@ -37,3 +37,4 @@ from INFORMATION_SCHEMA.KEY_COLUMN_USAGE
 where TABLE_NAME = 'table_name'
 AND COLUMN_NAME = 'column name'
 ```
+change `table_name` and `column_name` accordingly inside single quotes
