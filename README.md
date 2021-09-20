@@ -24,7 +24,7 @@
     c. many-to-many: user dengan payment method menjadi user_payment_method_detail
   
 ## DDL Recipe
-showing contraint name
+showing contraint name (https://stackoverflow.com/questions/824584/drop-foreign-key-without-knowing-the-name-of-the-constraint)
 ```sql
 select CONSTRAINT_NAME
 from INFORMATION_SCHEMA.TABLE_CONSTRAINTS
@@ -37,4 +37,4 @@ from INFORMATION_SCHEMA.KEY_COLUMN_USAGE
 where TABLE_NAME = 'table_name'
 AND COLUMN_NAME = 'column name'
 ```
-change `table_name` and `column_name` accordingly inside single quotes
+change `table_name` and `column_name` accordingly in the single quotes
