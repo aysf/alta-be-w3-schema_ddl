@@ -30,3 +30,10 @@ select CONSTRAINT_NAME
 from INFORMATION_SCHEMA.TABLE_CONSTRAINTS
 where TABLE_NAME = 'table_name'
 ```
+showing constraint name in specific column
+```sql
+select CONSTRAINT_NAME
+from INFORMATION_SCHEMA.KEY_COLUMN_USAGE
+where TABLE_NAME = 'table_name'
+AND COLUMN_NAME = 'column name'
+```
