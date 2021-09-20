@@ -28,5 +28,5 @@ showing contraint name
 ```sql
 select CONSTRAINT_NAME
 from INFORMATION_SCHEMA.TABLE_CONSTRAINTS
-where TABLE_NAME = 'detail_transaction'
+where TABLE_NAME = 'table_name'
 ```
