@@ -23,3 +23,10 @@
     b. 1-to-many: user dengan alamat    
     c. many-to-many: user dengan payment method menjadi user_payment_method_detail
   
+## DDL Recipe
+showing contraint name
+```sql
+select CONSTRAINT_NAME
+from INFORMATION_SCHEMA.TABLE_CONSTRAINTS
+where TABLE_NAME = 'detail_transaction'
+```
