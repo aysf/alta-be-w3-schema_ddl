@@ -49,11 +49,12 @@ ALTER TABLE Orders
 ADD FOREIGN KEY (PersonID) REFERENCES Persons(PersonID);
 ```
 
-add contraint with `ON DELETE` features. First of all, delete existing foreign key. then follow this syntax (https://stackoverflow.com/questions/1571581/how-to-add-on-delete-cascade-in-alter-table-statement)
+add contraint with `ON DELETE` features. First of all, delete existing foreign key. then follow this syntax (https://stackoverflow.com/questions/1571581/how-to-add-on-delete-cascade-in-alter-table-statement, https://dev.mysql.com/doc/refman/8.0/en/create-table-foreign-keys.html)
 ```sql
 ALTER TABLE child_table_name 
   ADD CONSTRAINT fk_name 
   FOREIGN KEY (child_column_name) 
   REFERENCES parent_table_name(parent_column_name) 
-  ON DELETE CASCADE;
+  ON DELETE [RESTRICT| CASCADE | SET NULL | NO ACTION | SET DEFAULT];
 ```
+having problem adding constraint see (https://www.percona.com/blog/2017/04/06/dealing-mysql-error-code-1215-cannot-add-foreign-key-constraint/)
