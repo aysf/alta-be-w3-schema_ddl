@@ -49,7 +49,7 @@ ALTER TABLE Orders
 ADD FOREIGN KEY (PersonID) REFERENCES Persons(PersonID);
 ```
 
-add contraint with `ON DELETE` features. First of all, delete existing foreign key. then follow this syntax
+add contraint with `ON DELETE` features. First of all, delete existing foreign key. then follow this syntax (https://stackoverflow.com/questions/1571581/how-to-add-on-delete-cascade-in-alter-table-statement)
 ```sql
 ALTER TABLE child_table_name 
   ADD CONSTRAINT fk_name 
