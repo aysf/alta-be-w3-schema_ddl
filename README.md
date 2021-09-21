@@ -38,3 +38,22 @@ where TABLE_NAME = 'table_name'
 AND COLUMN_NAME = 'column name'
 ```
 change `table_name` and `column_name` accordingly in the single quotes
+
+drop and add constraint (foreign key)
+
+```sql
+ALTER TABLE Orders
+DROP FOREIGN KEY FK_PersonOrder;
+
+ALTER TABLE Orders
+ADD FOREIGN KEY (PersonID) REFERENCES Persons(PersonID);
+```
+
+add contraint with `ON DELETE` features. First of all, delete existing foreign key. then follow this syntax
+```sql
+ALTER TABLE child_table_name 
+  ADD CONSTRAINT fk_name 
+  FOREIGN KEY (child_column_name) 
+  REFERENCES parent_table_name(parent_column_name) 
+  ON DELETE CASCADE;
+```
